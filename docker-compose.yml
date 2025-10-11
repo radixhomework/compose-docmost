@@ -4,8 +4,8 @@ services:
     environment:
       APP_URL: ${APP_URL}
       APP_SECRET: ${APP_SECRET}
-      DATABASE_URL: "postgresql://docmost:${DB_PASSWORD}@postgres:5432/docmost?schema=public"
-      REDIS_URL: "redis://redis:6379"
+      DATABASE_URL: postgresql://docmost:${DB_PASSWORD}@postgres:5432/docmost?schema=public
+      REDIS_URL: redis://redis:6379
     ports:
       - "${APP_PORT}:3000"
     volumes:
