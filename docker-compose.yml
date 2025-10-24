@@ -14,8 +14,14 @@ services:
       AWS_S3_ENDPOINT: ${S3_ENDPOINT}
       AWS_S3_FORCE_PATH_STYLE: true
       DISABLE_TELEMETRY: true
-      DEBUG_MODE: true
-      DB_DEBUG: true
+      MAIL_DRIVER: smtp
+      SMTP_HOST: ${SMTP_HOST}
+      SMTP_PORT: ${SMTP_PORT}
+      SMTP_USERNAME: ${SMTP_USERNAME}
+      SMTP_PASSWORD: ${SMTP_PASSWORD}
+      SMTP_SECURE: ${SMTP_SECURE}
+      MAIL_FROM_ADDRESS: ${MAIL_FROM_ADDRESS}
+      MAIL_FROM_NAME: ${MAIL_FROM_NAME}
     ports:
       - "${APP_PORT}:3000"
     volumes:
